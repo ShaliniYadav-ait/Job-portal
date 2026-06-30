@@ -39,6 +39,10 @@ private UsersType userType;
         this.userType = userType;
     }
 
+    public Users() {
+
+    }
+
     public int getUserId() {
         return userId;
     }
