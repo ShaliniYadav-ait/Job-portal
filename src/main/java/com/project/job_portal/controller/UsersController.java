@@ -20,7 +20,7 @@ public class UsersController {
         this.usersTypeService = usersTypeService;
     }
 
-    @GetMapping("register")
+    @GetMapping("/register")
     public String register(Model model){
        List<UsersType> usersTypes = usersTypeService.getAll();
        model.addAttribute("getAllTypes", usersTypes);
