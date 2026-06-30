@@ -52,7 +52,6 @@ private List<Users> users;
         return "UsersType{" +
                 "userTypeId=" + userTypeId +
                 ", userTypeName='" + userTypeName + '\'' +
-                ", users=" + users +
                 '}';
     }
 
