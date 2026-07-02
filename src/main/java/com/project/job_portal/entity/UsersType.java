@@ -5,17 +5,17 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="users_type")
+@Table(name = "users_type")
 public class UsersType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-private int userTypeId;
+    private int userTypeId;
 
-private String userTypeName;
+    private String userTypeName;
 
-@OneToMany(targetEntity = Users.class, mappedBy = "userTypeId", cascade = CascadeType.ALL)
-private List<Users> users;
+    @OneToMany(targetEntity = Users.class, mappedBy = "userTypeId", cascade = CascadeType.ALL)
+    private List<Users> users;
 
     public UsersType(int userTypeId, String userTypeName, List<Users> users) {
         this.userTypeId = userTypeId;

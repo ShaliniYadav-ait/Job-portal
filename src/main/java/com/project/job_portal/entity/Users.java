@@ -16,19 +16,19 @@ public class Users {
     private int userId;
 
     @Column(unique = true)
-private String email;
+    private String email;
 
     @NotEmpty
-private String password;
+    private String password;
 
-private boolean isActive;
+    private boolean isActive;
 
-@DateTimeFormat(pattern = "dd-MM-yyyy")
-private Date registrationDate;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    private Date registrationDate;
 
-@ManyToOne(cascade = CascadeType.ALL)
-@JoinColumn(name="userTypeId", referencedColumnName = "userTypeId")
-private UsersType userType;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "userTypeId", referencedColumnName = "userTypeId")
+    private UsersType userType;
 
     public Users(int userId, String email, String password, boolean isActive, Date registrationDate, UsersType userType) {
         this.userId = userId;
